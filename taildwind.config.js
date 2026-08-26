@@ -8,12 +8,19 @@ module.exports = {
     extend: {
       backgroundImage: theme => ({
         'wave-pattern': 'url(../img/wave-white.png)',
-      })
+      }),
+
+      screens:{
+        'xsm':'320px'
+
+      }
 
     },
   },
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: {
+    '@tailwindcss/jit': {},
+  },
 }
