@@ -1,15 +1,14 @@
-module.exports ={
-    purge:[
-        '.public/**/*html',
-    ],
-    darkMode: false, // or 'media' or 'class'
-    theme:{
-        extend:{}
-    },
-    variants:{
-        extend:{},
-    },
-    plugins:[]
-    
-
+module.exports = {
+  purge: [
+    './public/**/*.html',
+    './src/**/*.{js,ts,jsx,tsx}',
+  ],
+  darkMode: false, // o 'media' o 'class'
+  theme: {
+    extend: {},
+  },
+  variants: {
+    extend: {},
+  },
+  plugins: [],
 }
