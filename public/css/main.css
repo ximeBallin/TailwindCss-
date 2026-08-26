@@ -11,13 +11,18 @@
     --color-red-500: oklch(63.7% 0.237 25.331);
     --color-yellow-300: oklch(90.5% 0.182 98.111);
     --color-yellow-400: oklch(85.2% 0.199 91.936);
+    --color-gray-50: oklch(98.5% 0.002 247.839);
+    --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-gray-800: oklch(27.8% 0.033 256.848);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: calc(2 / 1.5);
     --font-weight-bold: 700;
+    --radius-3xl: 1.5rem;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
@@ -198,11 +203,17 @@
   .left-0 {
     left: 0px;
   }
+  .z-10 {
+    z-index: 10;
+  }
   .z-50 {
     z-index: 50;
   }
-  .my-4 {
-    margin-block: calc(var(--spacing) * 4);
+  .-mt-6 {
+    margin-top: calc(var(--spacing) * -6);
+  }
+  .-mt-12 {
+    margin-top: calc(var(--spacing) * -12);
   }
   .link {
     display: block;
@@ -225,8 +236,17 @@
   .hidden {
     display: none;
   }
+  .inline {
+    display: inline;
+  }
   .inline-block {
     display: inline-block;
+  }
+  .h-6 {
+    height: calc(var(--spacing) * 6);
+  }
+  .h-12 {
+    height: calc(var(--spacing) * 12);
   }
   .h-auto {
     height: auto;
@@ -246,6 +266,9 @@
   .cursor-pointer {
     cursor: pointer;
   }
+  .flex-row {
+    flex-direction: row;
+  }
   .items-center {
     align-items: center;
   }
@@ -255,20 +278,40 @@
   .justify-center {
     justify-content: center;
   }
+  .gap-3 {
+    gap: calc(var(--spacing) * 3);
+  }
   :where(.space-x-4 > :not(:last-child)) {
     --tw-space-x-reverse: 0;
     margin-inline-start: calc(calc(var(--spacing) * 4) * var(--tw-space-x-reverse));
     margin-inline-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-x-reverse)));
   }
+  .rounded-3xl {
+    border-radius: var(--radius-3xl);
+  }
   .rounded-full {
     border-radius: calc(infinity * 1px);
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
   }
   .border-4 {
     border-style: var(--tw-border-style);
     border-width: 4px;
   }
+  .border-8 {
+    border-style: var(--tw-border-style);
+    border-width: 8px;
+  }
+  .border-transparent {
+    border-color: transparent;
+  }
   .border-yellow-400 {
     border-color: var(--color-yellow-400);
+  }
+  .bg-black {
+    background-color: var(--color-black);
   }
   .bg-gray-800 {
     background-color: var(--color-gray-800);
@@ -276,8 +319,20 @@
   .bg-red-500 {
     background-color: var(--color-red-500);
   }
+  .bg-wave-pattern {
+    background-image: url('../../img/wave-white.png');
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-size: 100% 100%;
+  }
+  .bg-repeat-x {
+    background-repeat: repeat-x;
+  }
   .p-2 {
     padding: calc(var(--spacing) * 2);
+  }
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
   }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
@@ -287,6 +342,9 @@
   }
   .px-6 {
     padding-inline: calc(var(--spacing) * 6);
+  }
+  .px-16 {
+    padding-inline: calc(var(--spacing) * 16);
   }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
@@ -299,6 +357,10 @@
   }
   .text-center {
     text-align: center;
+  }
+  .text-2xl {
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
   }
   .text-xl {
     font-size: var(--text-xl);
@@ -328,22 +390,17 @@
     transition-duration: 500ms;
   }
   @media (hover: hover) {
+    .hover\:border-gray-50:hover {
+      border-color: var(--color-gray-50);
+    }
+    .hover\:border-gray-200:hover {
+      border-color: var(--color-gray-200);
+    }
     .hover\:bg-white:hover {
       background-color: var(--color-white);
     }
     .hover\:text-black:hover {
       color: var(--color-black);
-    }
-  }
-  @media (width >= 48rem) {
-    .md\:block {
-      display: block;
-    }
-    .md\:flex {
-      display: flex;
-    }
-    .md\:hidden {
-      display: none;
     }
   }
   @media (width >= 80rem) {

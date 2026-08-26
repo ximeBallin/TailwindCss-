@@ -5,7 +5,12 @@ module.exports = {
   ],
   darkMode: false, // o 'media' o 'class'
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: theme => ({
+        'wave-pattern': 'url(../img/wave-white.png)',
+      })
+
+    },
   },
   variants: {
     extend: {},

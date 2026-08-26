@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+@utility bg-wave-pattern {
+  background-image: url('../../img/wave-white.png');
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-size: 100% 100%;
+}
+
 @utility link {
   @apply text-white block p-5 font-bold hover:text-yellow-300;
 }
