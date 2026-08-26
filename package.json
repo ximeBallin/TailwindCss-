@@ -1,0 +1,19 @@
+{
+  "name": "tailwind-css-curso",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@tailwindcss/jit": "^0.1.18",
+    "autoprefixer": "^10.5.4",
+    "postcss-cli": "^11.0.1",
+    "tailwindcss": "^4.3.3"
+  }
+}
